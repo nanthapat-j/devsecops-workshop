@@ -1,26 +1,32 @@
-# DevSecOps Workshop
+# 🔒 DevSecOps Workshop
+> **Workshop การพัฒนาและปรับใช้ระบบความปลอดภัยแบบบูรณาการ**
 
-This comprehensive DevSecOps workshop is designed for individuals looking to enhance their skills in secure software development practices. The workshop includes the following components:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Workshop Status](https://img.shields.io/badge/Status-Active-green.svg)]()
+[![Thai Support](https://img.shields.io/badge/Thai-Supported-blue.svg)]()
 
-## Workshop Content
-- **Overview of DevSecOps**: Understanding the principles and practices of integrating security into DevOps.
-- **Thai Documentation**: All materials will be provided in Thai for better accessibility.
-- **Hands-on Labs**: Over 15 hands-on labs to provide practical experience with tools and techniques in the DevSecOps pipeline.
-- **Architecture Diagrams**: Visual representations of secure architecture patterns relevant to microservices.
-- **Microservices Security Patterns**: Detailed exploration of security patterns specifically for microservices architecture.
-- **Portfolio-Ready Structure**: Guidance on creating a portfolio that showcases your DevSecOps skills and projects.
+## 📋 **ภาพรวม Workshop**
 
-## Prerequisites
-- Basic knowledge of software development and operations.
-- Familiarity with cloud platforms and containerization.
+Workshop นี้ออกแบบมาเพื่อสอนการบูรณาการความปลอดภัย (Security) เข้ากับ DevOps pipeline แบบครบวงจร ตั้งแต่การพัฒนาโค้ด ไปจนถึงการ deploy และ monitor ในสภาพแวดล้อม production
 
-## Course Structure
-1. Introduction to DevSecOps
-2. Setting up your environment
-3. Security in the CI/CD pipeline
-4. Hands-on labs on security tools
-5. Best practices for securing microservices
-6. Final project and portfolio creation
+### 🎯 **เป้าหมายการเรียนรู้**
+- เข้าใจหลักการ DevSecOps และความสำคัญในยุคดิจิทัล
+- สามารถสร้าง secure CI/CD pipeline ที่ครบวงจร
+- ใช้เครื่องมือ security scanning และ monitoring ได้จริง
+- ประยุกต์ใช้ security best practices ในโปรเจคจริง
 
-## Conclusion
-This workshop aims to equip you with the necessary skills to implement security at every stage of the software development lifecycle, making you a valuable asset in any organization.
+## 🚀 **Quick Start**
+
+```bash
+# Clone repository
+git clone https://github.com/nanthapat-j/devsecops-workshop.git
+cd devsecops-workshop
+
+# One-command setup (รันทุกอย่างอัตโนมัติ)
+./scripts/setup.sh
+
+# Deploy sample microservices
+./scripts/deploy.sh
+
+# Access monitoring dashboard
+kubectl port-forward svc/grafana 3000:80 -n monitoring
