@@ -1,0 +1,332 @@
+# DevSecOps Workshop - .gitignore
+# Comprehensive gitignore for multi-language, multi-platform project
+
+# =============================================================================
+# OS and Editor Files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-*
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =============================================================================
+# Node.js and JavaScript
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+.stylelintcache
+*.tgz
+*.tar.gz
+.nyc_output
+coverage/
+.grunt
+bower_components
+.lock-wscript
+.node_repl_history
+*.tsbuildinfo
+.next/
+out/
+.nuxt/
+dist/
+
+# =============================================================================
+# Terraform
+# =============================================================================
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+crash.log
+crash.*.log
+.terraform-version
+
+# =============================================================================
+# AWS and Cloud
+# =============================================================================
+.aws/
+*.pem
+*.p12
+*.pfx
+aws-exports.js
+.amplify/
+amplify/
+.env.local
+.env.*.local
+.serverless/
+
+# =============================================================================
+# Kubernetes
+# =============================================================================
+kubeconfig
+*.kubeconfig
+kube-config
+
+# =============================================================================
+# Docker
+# =============================================================================
+Dockerfile.*
+docker-compose.override.yml
+.dockerignore
+
+# =============================================================================
+# Security and Secrets
+# =============================================================================
+.env
+.env.*
+!.env.example
+!.env.template
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+private/
+certs/
+ssl/
+.secret
+.secrets
+.vault
+.kube/
+.gnupg/
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+known_hosts
+
+# =============================================================================
+# Logs and Temporary Files
+# =============================================================================
+logs/
+*.log
+*.log.*
+log/
+temp/
+tmp/
+.tmp/
+*.tmp
+*.temp
+pid
+*.pid
+*.seed
+*.pid.lock
+
+# =============================================================================
+# Database
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# =============================================================================
+# Backup and Archive Files
+# =============================================================================
+*.bak
+*.backup
+*.orig
+*.rej
+*.patch
+*.diff
+*.tar
+*.zip
+*.rar
+*.7z
+
+# =============================================================================
+# Monitoring and Observability
+# =============================================================================
+prometheus/data/
+grafana/data/
+grafana/logs/
+alertmanager/data/
+jaeger/data/
+elasticsearch/data/
+
+# =============================================================================
+# CI/CD and Build Artifacts
+# =============================================================================
+.github/outputs/
+artifacts/
+reports/
+test-results/
+coverage-reports/
+security-reports/
+junit.xml
+sonar-project.properties
+.sonar/
+
+# =============================================================================
+# Local Development
+# =============================================================================
+.local/
+.cache/
+.config/
+local/
+local-*
+dev/
+dev-*
+debug/
+debug-*
+
+# =============================================================================
+# Workshop Specific
+# =============================================================================
+# Local workshop data
+workshop-data/
+student-work/
+exercises-completed/
+personal-notes/
+
+# Terraform local values
+terraform.tfvars.local
+*.auto.tfvars.local
+
+# Generated certificates
+generated-certs/
+self-signed/
+
+# Local Kubernetes configs
+local-kubeconfig
+kind-config.yaml
+
+# Cost reports and local data
+cost-reports/
+usage-reports/
+local-metrics/
+
+# Compliance reports with sensitive data
+compliance-reports/*.pdf
+pdpa-audit-results/
+security-assessment-*.json
+
+# =============================================================================
+# macOS
+# =============================================================================
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# =============================================================================
+# Windows
+# =============================================================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# =============================================================================
+# Linux
+# =============================================================================
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# JetBrains IDEs
+# =============================================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# =============================================================================
+# Visual Studio Code
+# =============================================================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# =============================================================================
+# Add any custom ignores below this line
+# =============================================================================

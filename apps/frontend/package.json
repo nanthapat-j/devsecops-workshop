@@ -1,0 +1,126 @@
+{
+  "name": "devsecops-ecommerce-frontend",
+  "version": "1.0.0",
+  "description": "Secure E-commerce Frontend - DevSecOps Workshop Thai Market",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "@reduxjs/toolkit": "^1.9.3",
+    "react-redux": "^8.0.5",
+    "axios": "^1.3.4",
+    "helmet": "^6.0.1",
+    "express-rate-limit": "^6.7.0",
+    "joi": "^17.8.3"
+  },
+  "devDependencies": {
+    "@types/helmet": "^4.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-security": "^1.7.1",
+    "prettier": "^2.8.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}",
+    "security:audit": "npm audit --audit-level=high",
+    "security:fix": "npm audit fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "airbnb",
+      "airbnb-typescript",
+      "plugin:security/recommended"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "security/detect-object-injection": "error",
+      "security/detect-non-literal-fs-filename": "error",
+      "security/detect-unsafe-regex": "error",
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test:coverage && npm run security:audit"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "keywords": [
+    "devsecops",
+    "security",
+    "react",
+    "typescript",
+    "ecommerce",
+    "thai-market",
+    "pdpa-compliant"
+  ],
+  "author": {
+    "name": "DevSecOps Workshop",
+    "email": "workshop@example.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanthapat-j/devsecops-workshop.git"
+  },
+  "homepage": "https://github.com/nanthapat-j/devsecops-workshop#readme"
+}
